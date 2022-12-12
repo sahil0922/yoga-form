@@ -32,6 +32,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 7000;
 
+console.log(port)
+
 app.use("/api/user",userRouter);
 app.use('/api/userPay',paymentRouter);
 
