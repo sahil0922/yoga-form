@@ -30,9 +30,6 @@ app.use(cors({origin:true}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const port = process.env.PORT || 7000;
-
-console.log(port)
 
 app.use("/api/user",userRouter);
 app.use('/api/userPay',paymentRouter);
@@ -52,6 +49,7 @@ app.get("*", function (req, res) {
 });
 
 
+const port = process.env.PORT || 7000;
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })
