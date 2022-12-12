@@ -8,7 +8,7 @@ dotenv.config()
 // ->>>> mongodb local 
 
 // for mongodb Atlas connection 
-const mongoDBConnectionURLtoUserDetail = "mongodb+srv://sahil22:Acer%40123@cluster0.dz0uzqg.mongodb.net/yoga-details?retryWrites=true&w=majority";
+const mongoDBConnectionURLtoUserDetail = process.env.MONGODB_URL
 const connectToDB = async() =>{
     await mongoose.connect(mongoDBConnectionURLtoUserDetail , { 
         useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 
